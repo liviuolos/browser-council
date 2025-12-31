@@ -6,6 +6,8 @@
 [![License](https://img.shields.io/badge/License-MIT-blue)]()
 [![Version](https://img.shields.io/badge/Version-1.0.0-orange)]()
 
+![Council Workspace](./public/assets/workspace-preview.png)
+
 ---
 
 ## 🎯 Overview
