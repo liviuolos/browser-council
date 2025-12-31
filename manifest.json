@@ -1,0 +1,75 @@
+{
+    "manifest_version": 3,
+    "name": "Multi-LLM PRD Writer",
+    "version": "1.2.0",
+    "description": "Coordinate ChatGPT, Claude, Gemini, and Grok with transparent, user-assisted workflows. Only operates on tabs YOU explicitly open - never accesses other browser windows or tabs.",
+    "permissions": [
+        "storage",
+        "alarms",
+        "activeTab",
+        "scripting",
+        "tabGroups",
+        "sidePanel"
+    ],
+    "host_permissions": [
+        "https://chatgpt.com/*",
+        "https://chat.openai.com/*",
+        "https://claude.ai/*",
+        "https://gemini.google.com/*",
+        "https://grok.com/*"
+    ],
+    "background": {
+        "service_worker": "src/background/index.ts",
+        "type": "module"
+    },
+    "side_panel": {
+        "default_path": "src/sidepanel/index.html"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://chatgpt.com/*",
+                "https://chat.openai.com/*"
+            ],
+            "js": [
+                "src/content/index.ts"
+            ],
+            "run_at": "document_idle"
+        },
+        {
+            "matches": [
+                "https://claude.ai/*"
+            ],
+            "js": [
+                "src/content/index.ts"
+            ],
+            "run_at": "document_idle"
+        },
+        {
+            "matches": [
+                "https://gemini.google.com/*"
+            ],
+            "js": [
+                "src/content/index.ts"
+            ],
+            "run_at": "document_idle"
+        },
+        {
+            "matches": [
+                "https://grok.com/*"
+            ],
+            "js": [
+                "src/content/index.ts"
+            ],
+            "run_at": "document_idle"
+        }
+    ],
+    "icons": {
+        "16": "icons/icon-16.png",
+        "48": "icons/icon-48.png",
+        "128": "icons/icon-128.png"
+    },
+    "action": {
+        "default_title": "Open Council Workspace"
+    }
+}

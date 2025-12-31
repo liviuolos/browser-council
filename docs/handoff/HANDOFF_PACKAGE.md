@@ -11,9 +11,9 @@ The implementation agent **MUST** read these files first to understand *what* to
 
 | File | Purpose | Criticality |
 |------|---------|-------------|
-| **`prd-v2.0-council-approved.md`** | **The Constitution**. Defines features, logic, and metrics. | 🔴 P0 (Required) |
-| **`pitch-a-claude-opus.md`** | **The Code Blueprints**. Contains actual `ServiceWorker` and `KeepAlive` class implementations. | 🔴 P0 (Required) |
-| **`pitch-b-chatgpt.nonfiction-guardrail.md`** | **The UI Spec**. Detailed UX layouts, error states, and accessibility rules. | 🔴 P0 (Required) |
+| **[`prd-v2.0-council-approved.md`](../specs/prd-v2.0-council-approved.md)** | **The Constitution**. Defines features, logic, and metrics. | 🔴 P0 (Required) |
+| **[`pitch-a-claude-opus.md`](../proposals/pitch-a-claude-opus.md)** | **The Code Blueprints**. Contains actual `ServiceWorker` and `KeepAlive` class implementations. | 🔴 P0 (Required) |
+| **[`pitch-b-chatgpt.nonfiction-guardrail.md`](../proposals/pitch-b-chatgpt.nonfiction-guardrail.md)** | **The UI Spec**. Detailed UX layouts, error states, and accessibility rules. | 🔴 P0 (Required) |
 | **`pitch-c-gemini.md`** | **The Security Model**. OWASP threat mitigations (specific sections only). | 🟡 P1 (Reference) |
 | **`pitch-d-grok.md`** | **The User Voice**. Validation for privacy features (no auto-send). | 🟢 P2 (Context) |
 
